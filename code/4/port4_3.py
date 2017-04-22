@@ -2,7 +2,7 @@
 
 import csv
 
-def portfolio_cost(filename, *, errors='warn'):
+def portfolio_cost(filename):
     '''
     Computes total shares*price for a CSV file with name, date, shares, price data
     '''
@@ -15,9 +15,9 @@ def portfolio_cost(filename, *, errors='warn'):
             try:
                 row[2] = int(row[2])
                 row[3] = float(row[3])
-            except ValueError as err:   
-				print('Row:', rowno, 'Bad row:', row)
-				print('Row:', rowno, 'Reason:', err)
+            except ValueError as err:
+                print('Row:', rowno, 'Bad row:', row)
+                print('Row:', rowno, 'Reason:', err)
                 continue    # Skips to the next row
             total += row[2] * row[3]
     return total
