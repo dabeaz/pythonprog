@@ -1,0 +1,10 @@
+# since I'm using this from VSCode on windows10, with bash
+#  I have to be careful not to grab nonsense
+
+# none of the reg files:
+*.reg
+# no bash links back to windows filespace:
+dosdevices
+drive_c
+# not sure what this is - expect VSCode related?
+.update-timestamp
