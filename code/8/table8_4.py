@@ -7,7 +7,7 @@ def print_table(objects, colnames, formatter):
     '''
     formatter.headings(colnames)
     for obj in objects:
-        rowdata = [str(getattr(obj, colname)) for colname in colnames ]
+        rowdata = [str(getattr(obj, colname)) for colname in colnames]
         formatter.row(rowdata)
 
 
@@ -21,7 +21,7 @@ class TablePrinter(object):
         '''
         self.formatter.headings(colnames)
         for obj in objects:
-            rowdata = [str(getattr(obj, colname)) for colname in colnames ]
+            rowdata = [str(getattr(obj, colname)) for colname in colnames]
             self.formatter.row(rowdata)
 
 class TableFormatter(object):
@@ -46,7 +46,7 @@ class TextTableFormatter(TableFormatter):
         for header in headers:
             print('{:>{}s}'.format(header, self.width), end=' ', file=self.outfile)
         print(file=self.outfile)
-    
+
     def row(self, rowdata):
         for item in rowdata:
             print('{:>{}s}'.format(item, self.width), end=' ', file=self.outfile)
@@ -74,8 +74,5 @@ class HTMLTableFormatter(TableFormatter):
 
 class QuotedMixin(object):
     def row(self, rowdata):
-        quoted = [ '"{}"'.format(d) for d in rowdata ]
+        quoted = ['"{}"'.format(d) for d in rowdata]
         super().row(quoted)
-
-
-        
