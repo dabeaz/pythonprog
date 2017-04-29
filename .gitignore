@@ -1,6 +1,7 @@
+# editor remnant files:
+*.csv~
 # since I'm using this from VSCode on windows10, with bash
 #  I have to be careful not to grab nonsense
-
 # none of the reg files:
 *.reg
 # no bash links back to windows filespace:
