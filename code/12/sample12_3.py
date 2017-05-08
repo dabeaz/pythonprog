@@ -1,6 +1,6 @@
 # sample.py
 
-from logcall import logformat
+from logcall12_3 import logformat
 
 logged = logformat('YOU ARE CALLING {func.__name__}')
 
