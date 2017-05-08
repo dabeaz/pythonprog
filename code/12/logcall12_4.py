@@ -26,7 +26,3 @@ def logmethods(cls):
             # Is it a method? If so, decorate
             setattr(cls, logged(value))
     return cls
-
-
-
-    
