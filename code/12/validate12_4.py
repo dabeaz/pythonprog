@@ -25,8 +25,8 @@ class String(Typed):
 
 def typed(cls):
     for key, val in vars(cls).items():
-        if isinstance(value, Typed):
-            value.name = key
+        if isinstance(val, Typed):
+            val.name = key
     return cls
 
 def validate(**kwargs):
