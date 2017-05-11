@@ -24,4 +24,4 @@ for line in follow('Data/stocklog.csv'):
     if change < 0:
         name = row[0]
         price = row[1]
-        print('{:>10s} {:>10s} {:>10.2f}'.format(name, price, change))
+        print('{:>10s} {:>10.2f} {:>10.2f}'.format(name, price, change))
