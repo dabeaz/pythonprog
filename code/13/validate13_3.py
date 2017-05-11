@@ -24,6 +24,7 @@ class String(Typed):
     expected_type = str
 
 def typed(cls):
+    cls._attributes = set()
     for key, val in vars(cls).items():
         if isinstance(val, Typed):
             val.name = key
@@ -43,7 +44,10 @@ class structuretype(type):
         return cls
 
 class Structure(metaclass=structuretype):
-    pass
+    def __setattr__(self, name, value):
+        if name not in self._attributes:
+            raise AttributeError('No attribute {}'.format(name))
+        super().__setattr__(name, value)
 
 class Holding(Structure):
     name = String()
@@ -56,11 +60,6 @@ class Holding(Structure):
         self.date = date
         self.shares = shares
         self.price = price
-
-    def __setattr__(self, name, value):
-        if name not in { 'name', 'date', 'shares', 'price' }:
-            raise AttributeError('No attribute {}'.format(name))
-        super().__setattr__(name, value)
 
     @property
     def cost(self):
