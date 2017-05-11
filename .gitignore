@@ -9,3 +9,4 @@ dosdevices
 drive_c
 # not sure what this is - expect VSCode related?
 .update-timestamp
+__pycache__/
