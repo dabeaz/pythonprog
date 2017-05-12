@@ -25,22 +25,16 @@ class String(Typed):
 
 def typed(cls):
     cls._attributes = set()
-    for key, val in vars(cls).items():
-        if isinstance(val, Typed):
-            val.name = key
+    for key, value in vars(cls).items():
+        if isinstance(value, Typed):
+            value.name = key
+            cls._attributes.add(key)
     return cls
-
-def validate(**kwargs):
-    def decorate(cls):
-        for name, val in kwargs.items():
-            setattr(cls, name, val(name))
-        return cls
-    return decorate
 
 class structuretype(type):
     def __new__(meta, name, bases, methods):
         cls = super().__new__(meta, name, bases, methods)
-        cls = typed(cls)
+        cls = typed(cls)    # Apply a class decorator
         return cls
 
 class Structure(metaclass=structuretype):
@@ -64,4 +58,3 @@ class Holding(Structure):
     @property
     def cost(self):
         return self.shares * self.price
-
