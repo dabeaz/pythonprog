@@ -29,6 +29,6 @@ def portfolio_cost(filename, *, errors='warn'):
             total += row[2] * row[3]
     return total
 
-total = portfolio_cost('Data/bogus.csv', errors='silent')
+total = portfolio_cost('../../Data/bogus.csv', errors='silent')
 print('Total cost:', total)
 

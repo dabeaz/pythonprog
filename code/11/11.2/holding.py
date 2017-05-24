@@ -89,4 +89,4 @@ def read_portfolio(filename):
     return portfolio
 
 if __name__ == '__main__':
-    portfolio = read_portfolio('Data/portfolio.csv')
+    portfolio = read_portfolio('../../Data/portfolio.csv')

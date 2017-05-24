@@ -36,7 +36,7 @@ def read_portfolio(filename, *, errors='warn'):
             portfolio.append(record)
     return portfolio
 
-portfolio = read_portfolio('Data/portfolio.csv')
+portfolio = read_portfolio('../../Data/portfolio.csv')
 
 total = 0.0
 for holding in portfolio:

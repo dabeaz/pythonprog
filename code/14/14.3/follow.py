@@ -24,7 +24,7 @@ def parse_stock_data(lines):
     converted = ( [func(val) for func, val in zip(types, row)] for row in rows)
     return converted
 
-lines = follow('Data/stocklog.csv')
+lines = follow('../../Data/stocklog.csv')
 rows = parse_stock_data(lines)
 negchange = (row for row in rows if row[4] < 0)
 for row in negchange:

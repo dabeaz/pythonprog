@@ -4,7 +4,7 @@ import csv
 
 total = 0.0
 
-with open('Data/portfolio.csv', 'r') as f:
+with open('../../Data/portfolio.csv', 'r') as f:
     rows = csv.reader(f)
     headers = next(rows)   # Skip the header row
     for row in rows:

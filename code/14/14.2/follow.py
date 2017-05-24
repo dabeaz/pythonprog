@@ -16,9 +16,9 @@ def follow(filename):
             continue   # Retry
         yield line     # Emit a line
 
-f = open('Data/stocklog.csv')
+f = open('../../Data/stocklog.csv')
 lines = f.readlines()
-for line in follow('Data/stocklog.csv'):
+for line in follow('../../Data/stocklog.csv'):
     row = line.split(',')
     change = float(row[4])
     if change < 0:
