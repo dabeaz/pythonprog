@@ -41,7 +41,7 @@ class TextTableFormatter(TableFormatter):
 
     def row(self, rowdata):
         for item in rowdata:
-            print('{:>10s}'.format(item, end=' ')
+            print('{:>10s}'.format(item), end=' ')
         print()
 
 class CSVTableFormatter(TableFormatter):
