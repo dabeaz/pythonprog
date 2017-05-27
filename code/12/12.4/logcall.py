@@ -24,5 +24,5 @@ def logmethods(cls):
     for key, value in list(vars(cls).items()):
         if callable(value):
             # Is it a method? If so, decorate
-            setattr(cls, logged(value))
+            setattr(cls, key, logged(value))
     return cls
