@@ -1,6 +1,6 @@
 # sample.py
 
-from logcall12_2 import logged
+from logcall import logged
 
 @logged
 def add(x, y):
