@@ -12,8 +12,8 @@ def portfolio_cost(filename):
         rows = csv.reader(f)
         headers = next(rows)   # Skip the header row
         for row in rows:
-			row[2] = int(row[2])
-			row[3] = float(row[3])
+            row[2] = int(row[2])
+            row[3] = float(row[3])
             total += row[2] * row[3]
     return total
 
