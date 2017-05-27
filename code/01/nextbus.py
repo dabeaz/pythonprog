@@ -4,6 +4,7 @@
 import sys
 
 if len(sys.argv) != 3:
+    # e.g., from video: nextbus.py 22 14787
     raise SystemExit('Usage: nextbus.py route stopid')
 
 route = sys.argv[1]
