@@ -35,7 +35,7 @@ def validate(**kwargs):
             setattr(cls, name, val(name))
         return cls
     return decorate
-    
+
 
 @validate(name=String, shares=Integer, price=Float)
 class Holding(object):

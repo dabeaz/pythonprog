@@ -1,6 +1,6 @@
 # sample.py
 
-from logcall12_4 import logformat, logmethods
+from logcall import logformat, logmethods
 
 logged = logformat('YOU ARE CALLING {func.__name__}')
 
@@ -31,4 +31,3 @@ class Spam(object):
     def grok(self):
         print('Grok!')
 
-    
