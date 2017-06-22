@@ -45,13 +45,13 @@ code from there.  Otherwise, you might need to fiddle with file paths.
 
 ## FAQ
 
-Q: Is the companion video available for free?
+Q: Is the companion video available for free?  
 A: No. The video is a commercial product sold by Addison-Wesley Professional. 
 
-Q: I've found an error, can I submit a bug report?
+Q: I've found an error, can I submit a bug report?  
 A: Yes.  Please submit errors as a new issue on Github.
 
-Q: Is there a discussion forum where I can ask questions?
+Q: Is there a discussion forum where I can ask questions?  
 A: Yes, Dave there is a Discourse forum at https://forum.dabeaz.com/c/python-programming-language-video
 
 ## Acknowledgements
