@@ -7,6 +7,8 @@ Professional, ISBN: 0134217314. August, 2016.
 You can purchase the companion video on
 [Safari](https://www.safaribooksonline.com/library/view/python-programming-language/9780134217314/).
 
+Sample lessons can be viewed on [InformIT](http://www.informit.com/store/python-programming-language-livelessons-9780134217321).
+
 ## Overview
 
 The "Python Programming Language" video consists 6.5 hours of
